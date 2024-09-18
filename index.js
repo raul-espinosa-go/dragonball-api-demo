@@ -44,9 +44,9 @@ async function fetchData() {
       // Create a description element
 
       // Append elements to the card
-      card.appendChild(img);
-      card.appendChild(title);
-      card.appendChild(description);
+      card.appendChild();
+      card.appendChild();
+      card.appendChild();
 
       // Append the card to the container
       charactersContainer.appendChild(card);
