@@ -38,13 +38,10 @@ async function fetchData() {
       card.className = "character-card";
 
       // Create an image element
-      const img = document.createElement("img");
 
       // Create a title element
-      const title = document.createElement("h2");
 
       // Create a description element
-      const description = document.createElement("p");
 
       // Append elements to the card
       card.appendChild(img);
