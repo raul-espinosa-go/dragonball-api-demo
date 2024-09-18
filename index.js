@@ -5,7 +5,6 @@ const API_URL = "https://dragonball-api.com/api/characters";
 async function fetchData() {
   try {
     // Make the request to the API
-    const response = await fetch(API_URL);
 
     // Check if the response is ok
     if (!response.ok) {
@@ -27,9 +26,6 @@ async function fetchData() {
       throw new Error("Network response was not ok");
     }
 
-    // Parse the JSON from the response
-    const data = await response.json();
-
     // Get the characters container
     const charactersContainer = document.getElementById("characters");
 
@@ -43,18 +39,12 @@ async function fetchData() {
 
       // Create an image element
       const img = document.createElement("img");
-      img.src = character.image || "https://via.placeholder.com/200";
-      img.alt = character.name;
 
       // Create a title element
       const title = document.createElement("h2");
-      title.textContent = character.name;
 
       // Create a description element
       const description = document.createElement("p");
-      description.textContent =
-        character.description || "No description available";
-      description.className = "description"; // Make sure to apply the class for scrolling
 
       // Append elements to the card
       card.appendChild(img);
